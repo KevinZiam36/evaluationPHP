@@ -1,7 +1,7 @@
 <form action="" method="post">
 
     <label for="heure">Quelle heure est-il ?</label>
-    <input type="number" name="heure" id="heure">
+    <input type="time" name="heure" id="heure">
 
     
     <input type="submit" name ="submit" value="envoyer">
@@ -24,20 +24,20 @@ if ( isset( $_POST['submit'] ) ) {
     
 };
 ini_set('display_errors', 'off');
-if($heure < 12){
-    echo 'Vu qu\'il est ' .$heure. 'h bonne matinée';
+if($heure < 12.00){
+    echo 'Vu qu\'il est ' .$heure. ' bonne matinée';
 }
-else if($heure >= 12 && $heure < 14){
-    echo 'Vu qu\'il est ' .$heure. 'h bon appetit';
+else if($heure >= 12.00 && $heure < 14.00){
+    echo 'Vu qu\'il est ' .$heure. ' bon appetit';
 }
 
-else if($heure >= 14 && $heure < 18)
+else if($heure >= 14.00 && $heure < 18.00)
 {
-    echo 'Vu qu\'il est ' .$heure. 'h bon après-midi';
+    echo 'Vu qu\'il est ' .$heure. ' bon après-midi';
 }
 else 
 {
-    echo 'Vu qu\'il est ' .$heure. 'h bonne soirée';
+    echo 'Vu qu\'il est ' .$heure. ' bonne soirée';
 }
 
 
