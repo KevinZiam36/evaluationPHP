@@ -23,7 +23,7 @@ if ( isset( $_POST['submit'] ) ) {
     $heure = $_POST['heure']; 
     
 };
-
+ini_set('display_errors', 'off');
 if($heure < 12){
     echo 'Vu qu\'il est ' .$heure. 'h bonne matinée';
 }
